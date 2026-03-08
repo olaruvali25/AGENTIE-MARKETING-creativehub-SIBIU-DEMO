@@ -2,10 +2,14 @@
   "name": "agentie-de-marketing-sibiu-codex",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "clean": "rimraf .next .next-dev",
-    "predev": "rimraf .next-dev",
+    "predev": "rimraf .next .next-dev",
     "dev": "next dev",
+    "typecheck": "tsc --noEmit",
     "prebuild": "rimraf .next",
     "build": "next build",
     "prestart": "npm run build",
