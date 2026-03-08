@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 170 22% 78%;
+  --foreground: 0 0% 7%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 7%;
+  --primary: 280 55% 44%;
+  --primary-foreground: 0 0% 7%;
+  --secondary: 309 58% 70%;
+  --secondary-foreground: 0 0% 7%;
+  --muted: 170 18% 72%;
+  --muted-foreground: 0 0% 18%;
+  --accent: 309 58% 70%;
+  --accent-foreground: 0 0% 7%;
+  --border: 280 40% 60%;
+  --input: 170 18% 72%;
+  --ring: 309 58% 70%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 18%, rgba(224, 134, 211, 0.26), transparent 28%),
+    radial-gradient(circle at 82% 12%, rgba(131, 50, 172, 0.22), transparent 24%),
+    radial-gradient(circle at 70% 72%, rgba(242, 209, 201, 0.28), transparent 20%),
+    linear-gradient(180deg, #bad1cd 0%, #a8c6c2 100%);
+  color: #111111;
+  font-family: var(--font-body), sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.12) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mask-image: radial-gradient(circle at center, black 34%, transparent 76%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(131, 50, 172, 0.06), transparent 28%, transparent 72%, rgba(224, 134, 211, 0.08));
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(131, 50, 172, 0.22);
+  color: #111111;
+}
+
+.parallax {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: clip;
+}
+
+.parallax__group {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  inset: 0;
+}
+
+.parallax__layer--base {
+  position: relative;
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--deep {
+  transform: translateZ(-2px) scale(3);
+}
+
+.parallax__layer--fore {
+  transform: translateZ(0.5px) scale(0.5);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes first {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  25% {
+    transform: translate(10%, -14%) scale(1.08);
+  }
+  50% {
+    transform: translate(-12%, 8%) scale(0.94);
+  }
+  75% {
+    transform: translate(8%, 14%) scale(1.04);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+@keyframes second {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  50% {
+    transform: rotate(180deg) translateX(12%);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0);
+  }
+}
+
+@keyframes third {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-180deg) translateY(-12%);
+  }
+  100% {
+    transform: rotate(-360deg) translateY(0);
+  }
+}
+
+@keyframes fourth {
+  0% {
+    transform: translate(-8%, 10%) scale(0.92);
+  }
+  50% {
+    transform: translate(10%, -12%) scale(1.08);
+  }
+  100% {
+    transform: translate(-8%, 10%) scale(0.92);
+  }
+}
+
+@keyframes fifth {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-10%, 10%) rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(360deg) scale(1);
+  }
+}
+
+.animate-first {
+  animation: first 18s ease-in-out infinite;
+}
+
+.animate-second {
+  animation: second 22s linear infinite;
+}
+
+.animate-third {
+  animation: third 24s linear infinite;
+}
+
+.animate-fourth {
+  animation: fourth 20s ease-in-out infinite;
+}
+
+.animate-fifth {
+  animation: fifth 26s ease-in-out infinite;
+}

@@ -1,0 +1,20 @@
+<svg width="760" height="1024" viewBox="0 0 760 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="1024" rx="48" fill="#FFFBF5"/>
+  <rect x="36" y="36" width="688" height="952" rx="36" fill="url(#paint0_linear)"/>
+  <circle cx="202" cy="228" r="152" fill="#FB923C" fill-opacity="0.24"/>
+  <circle cx="598" cy="818" r="184" fill="#0F766E" fill-opacity="0.18"/>
+  <path d="M118 162H308" stroke="#0F172A" stroke-width="16" stroke-linecap="round"/>
+  <path d="M118 214H466" stroke="#334155" stroke-opacity="0.6" stroke-width="10" stroke-linecap="round"/>
+  <rect x="118" y="322" width="522" height="278" rx="28" fill="#FFF7ED" stroke="#FDBA74"/>
+  <path d="M118 694H572" stroke="#334155" stroke-opacity="0.2" stroke-width="2"/>
+  <path d="M118 742H522" stroke="#334155" stroke-opacity="0.2" stroke-width="2"/>
+  <path d="M118 790H380" stroke="#334155" stroke-opacity="0.2" stroke-width="2"/>
+  <text x="118" y="886" fill="#0F172A" font-family="Arial, sans-serif" font-size="48" font-weight="700">Agency Card Two</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="120" y1="80" x2="612" y2="944" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="0.58" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#ECFDF5"/>
+    </linearGradient>
+  </defs>
+</svg>
